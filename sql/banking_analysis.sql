@@ -1,7 +1,6 @@
 -- ================================================================
 --  INDIAFIRST BANK — COMPLETE ANALYTICS SYSTEM
---  Advanced SQL Portfolio Project (Beginner → Expert Level)
---  Author  : [Your Name]
+--  Author  : [mehak pandey]
 --  Dataset : 7 Tables | 50,000 Transactions | 3,000 Customers
 --            2,000 Loans | 1,500 Investments | 2020–2024
 -- ================================================================
@@ -194,14 +193,14 @@ SELECT r.customer_id, c.customer_name, c.customer_segment,
        r.r_score, r.f_score, r.m_score,
        r.r_score + r.f_score + r.m_score AS rfm_total,
        CASE
-           WHEN r.r_score>=4 AND r.f_score>=4 AND r.m_score>=4 THEN '💎 Champions'
-           WHEN r.r_score>=3 AND r.f_score>=3                  THEN '🥇 Loyal Customers'
-           WHEN r.r_score>=4 AND r.f_score<=2                  THEN '🌟 Potential Loyalist'
-           WHEN r.r_score>=4 AND r.f_score=1                   THEN '🆕 New Customers'
-           WHEN r.r_score<=2 AND r.f_score>=3 AND r.m_score>=3 THEN '😴 At Risk'
-           WHEN r.r_score<=2 AND r.f_score>=4 AND r.m_score>=4 THEN '😱 Cant Lose Them'
-           WHEN r.r_score<=1 AND r.f_score<=1                  THEN '💀 Lost'
-           ELSE '🔮 Needs Attention'
+           WHEN r.r_score>=4 AND r.f_score>=4 AND r.m_score>=4 THEN 'Champions'
+           WHEN r.r_score>=3 AND r.f_score>=3                  THEN ' Loyal Customers'
+           WHEN r.r_score>=4 AND r.f_score<=2                  THEN 'Potential Loyalist'
+           WHEN r.r_score>=4 AND r.f_score=1                   THEN 'New Customers'
+           WHEN r.r_score<=2 AND r.f_score>=3 AND r.m_score>=3 THEN 'At Risk'
+           WHEN r.r_score<=2 AND r.f_score>=4 AND r.m_score>=4 THEN 'Cant Lose Them'
+           WHEN r.r_score<=1 AND r.f_score<=1                  THEN ' Lost'
+           ELSE ' Needs Attention'
        END AS rfm_segment
 FROM rfm_scores r
 JOIN customers c ON r.customer_id = c.customer_id
