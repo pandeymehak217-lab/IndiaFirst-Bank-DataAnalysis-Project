@@ -12,16 +12,8 @@
 
 **IndiaFirst Bank Analytics System** is a full-stack data analytics project simulating
 a real Indian bank's analytics infrastructure. It covers everything from raw data generation
-to executive dashboards — exactly what interviewers test for Data Analyst roles at banks,
-NBFCs, and fintech companies.
+to executive dashboards.
 
-**Why this stands out:**
-- 7 interconnected tables (not a single flat file)
-- 50,000 transactions + real Indian banking context
-- Covers SQL → Python → Excel → Power BI → Tableau in one project
-- Advanced analytics: RFM, CLV, Fraud Scoring, NPA Analysis, Churn Prediction
-
----
 
 ##  Dataset
 
