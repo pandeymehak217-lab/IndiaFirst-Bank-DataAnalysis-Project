@@ -178,7 +178,5 @@ python run_queries.py
 **[Mehak pandey ]** —  Data Analyst
 pandeymehak.217@gmail.com 
 
-*Dataset synthetically generated to simulate real Indian banking operations.*
-
 ---
 
