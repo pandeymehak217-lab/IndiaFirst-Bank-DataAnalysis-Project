@@ -26,7 +26,7 @@ NBFCs, and fintech companies.
 
 ---
 
-## 🗂️ Dataset
+##  Dataset
 
 | Table | Rows | Description |
 |-------|------|-------------|
@@ -77,7 +77,7 @@ banking-analytics/
 
 ## 🎯 Analytics Modules
 
-### 1️⃣ SQL Analytics (Beginner → Expert)
+### 1️⃣ SQL Analytics 
 | Level | Queries |
 |-------|---------|
 | Beginner | Account distribution, State-wise deposits, Channel analysis |
@@ -92,13 +92,13 @@ banking-analytics/
 - Fraud signal scoring
 
 ### 3️⃣ Excel Report (7 Sheets)
-- 📊 Executive Summary — KPI cards + monthly trend
-- 👥 Customer Analytics — Segments + State + RFM
-- 💰 Loan Analytics — Book + NPA + Vintage
-- 💳 Transactions — Channel + Category + Fraud
-- 📈 Investments — Risk-Return + Zone
-- 🏦 Branch Performance — Scorecard + Zone
-- 🎫 Support Analytics — SLA + CSAT
+-  Executive Summary — KPI cards + monthly trend
+- Customer Analytics — Segments + State + RFM
+-  Loan Analytics — Book + NPA + Vintage
+- Transactions — Channel + Category + Fraud
+-  Investments — Risk-Return + Zone
+-  Branch Performance — Scorecard + Zone
+-  Support Analytics — SLA + CSAT
 
 ### 4️⃣ Power BI (5 Dashboard Pages)
 - Executive Overview with DAX KPI cards
@@ -140,7 +140,7 @@ banking-analytics/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ```bash
 # 1. Install dependencies
@@ -161,18 +161,6 @@ python run_queries.py
 
 ---
 
-## 📝 Resume Bullet Points
-
-> - Built **end-to-end banking analytics system** on 50,000 transactions across 7 related tables (customers, accounts, loans, investments, branches) using SQL, Python, Excel, and Power BI
-> - Implemented **RFM segmentation model** using NTILE() window functions to classify 3,000 customers into 6 segments (Champions, Loyal, At Risk, Lost) for targeted marketing campaigns
-> - Designed **multi-signal fraud detection scoring model** in SQL assigning risk scores (0–100) based on transaction time, amount z-score, channel, and category — flagging 449 suspicious transactions
-> - Built **Customer Lifetime Value (CLV)** calculation combining transaction revenue, loan interest estimates, and investment fees; ranked top 10 customers contributing 35%+ of estimated revenue
-> - Produced **7-sheet Excel analytical report** using Python xlsxwriter with conditional formatting, KPI cards, and multi-level pivot tables covering loans, deposits, investments, and support SLA
-> - Created **Power BI dashboard** with 10 DAX measures (GNPA%, MAU, MoM Growth, CLV Score) across 5 pages; built Tableau dashboards with calculated fields for fraud heatmaps and RFM scatter plots
-> - Performed **NPA (Non-Performing Asset) analysis** identifying ₹526Cr loan book risk, estimating recovery potential by collateral type, and flagging 218 accounts (10.9%) as NPA
-
----
-
 ## 🛠️ Tools Used
 
 | Tool | Purpose |
@@ -187,10 +175,10 @@ python run_queries.py
 ---
 
 ## 👤 Author
-**[Your Name]** — Fresher Data Analyst
-📧 email | 🔗 LinkedIn | 💻 GitHub
+**[Mehak pandey ]** —  Data Analyst
+pandeymehak.217@gmail.com 
 
 *Dataset synthetically generated to simulate real Indian banking operations.*
 
 ---
-⭐ Star this if it helped your job search!
+
