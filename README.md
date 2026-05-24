@@ -1,171 +1,196 @@
-# 🏦 IndiaFirst Bank — Complete Analytics System
-### End-to-End Data Analyst Portfolio Project | 
-[![SQL](https://img.shields.io/badge/SQL-Advanced-blue)]()
-[![Python](https://img.shields.io/badge/Python-Pandas%20%7C%20Matplotlib-green)]()
-[![Excel](https://img.shields.io/badge/Excel-7%20Sheet%20Report-darkgreen)]()
-[![Dataset](https://img.shields.io/badge/Dataset-50K%20Transactions%20%7C%207%20Tables-red)]()
-[![Period](https://img.shields.io/badge/Period-2020--2024-purple)]()
+# IndiaFirst Bank — Complete Analytics System
+
+After finishing the first two SQL projects I wanted to build something
+bigger. Something that looked closer to what a data analyst at an actual
+bank would work on. So I picked banking because it has everything —
+fraud, loans, investments, customer segmentation, branch performance —
+and tried to build an end-to-end system rather than just a bunch of queries.
+
+This is the project I spent the most time on so far.
 
 ---
 
-## 📌 Project Overview
+## What I Built
 
-**IndiaFirst Bank Analytics System** is a full-stack data analytics project simulating
-a real Indian bank's analytics infrastructure. It covers everything from raw data generation
-to executive dashboards.
-
-
-##  Dataset
-
-| Table | Rows | Description |
-|-------|------|-------------|
-| `branches` | 50 | Branch locations across 15 states |
-| `customers` | 3,000 | Demographics, income, credit score |
-| `accounts` | 4,253 | Savings, Current, FD, NRI accounts |
-| `transactions` | 50,000 | 5 years of transactions (2020-2024) |
-| `loans` | 2,000 | Home, Personal, Car, Education loans |
-| `investments` | 1,500 | MF, FD, SIP, PPF, Stocks |
-| `tickets` | 5,000 | Customer support tickets |
-
-**Total Loan Book: ₹526 Crore | Fraud Transactions: 449 | NPA Loans: 218**
+A full analytics system on 7 related tables covering 50,000 transactions
+across 5 years. The SQL goes from basic aggregations all the way to RFM
+segmentation, fraud scoring, churn prediction, and customer lifetime value.
+On top of the SQL I wrote Python to generate charts and a 7-sheet Excel
+report, and added a Power BI guide with DAX measures.
 
 ---
 
-## 📁 Project Structure
+## Why 7 Tables
+
+I kept the first two projects to 3-4 tables. This time I wanted to
+practice joining across a proper relational structure the way a real
+bank database would look.
+
+Branches connect to customers, customers connect to accounts,
+accounts connect to transactions, customers connect to loans and
+investments and support tickets. Writing the Customer 360 query
+that pulls from all of these in one CTE took a few hours to get right
+but it was worth it.
+
+---
+
+## Dataset
+
+| Table | Rows | What it contains |
+|-------|------|-----------------|
+| branches | 50 | Locations across 15 states, zone, manager |
+| customers | 3,000 | Demographics, income bracket, credit score |
+| accounts | 4,253 | Savings, Current, FD, NRI accounts |
+| transactions | 50,000 | 5 years of transactions 2020 to 2024 |
+| loans | 2,000 | Home, Personal, Car, Education, Business |
+| investments | 1,500 | MF, FD, SIP, PPF, Stocks |
+| tickets | 5,000 | Customer support with resolution time |
+
+Total loan book came out at Rs 526 Crore.
+449 transactions were flagged as fraud.
+218 loan accounts hit NPA status.
+
+---
+
+## Folder Structure
 
 ```
-banking-analytics/
-│
-├── data/                          # 7 CSV datasets
-│   ├── branches.csv
-│   ├── customers.csv
-│   ├── accounts.csv
-│   ├── transactions.csv
-│   ├── loans.csv
-│   ├── investments.csv
-│   └── tickets.csv
-│
-├── sql/
-│   └── banking_analysis.sql       # 20+ queries: Beginner → Expert
-│
-├── python/
-│   └── analysis.py                # Full analytics + chart + Excel generator
-│
-├── outputs/
-│   ├── bank_dashboard.png         # 8-panel matplotlib dashboard
-│   └── IndiaFirst_Bank_Analytics_Report.xlsx  # 7-sheet Excel report
-│
-├── powerbi/
-│   └── POWERBI_TABLEAU_GUIDE.md  # DAX measures + setup guide
-│
-├── generate_data.py               # Realistic data generator
-└── README.md
-```
-
----
-
-## 🎯 Analytics Modules
-
-### 1️⃣ SQL Analytics 
-| Level | Queries |
-|-------|---------|
-| Beginner | Account distribution, State-wise deposits, Channel analysis |
-| Intermediate | MoM growth with LAG(), Customer 360, Branch scorecard, NPA analysis |
-| Advanced | RFM Segmentation, Fraud scoring model, Churn prediction, CLV, Rolling averages |
-| Expert | Zone profitability, Cross-sell matrix, Full P&L view |
-
-### 2️⃣ Python Analysis
-- Pandas data manipulation across 7 tables
-- Matplotlib 8-panel executive dashboard
-- RFM segmentation implementation
-- Fraud signal scoring
-
-### 3️⃣ Excel Report (7 Sheets)
--  Executive Summary — KPI cards + monthly trend
-- Customer Analytics — Segments + State + RFM
--  Loan Analytics — Book + NPA + Vintage
-- Transactions — Channel + Category + Fraud
--  Investments — Risk-Return + Zone
--  Branch Performance — Scorecard + Zone
--  Support Analytics — SLA + CSAT
-
-### 4️⃣ Power BI (5 Dashboard Pages)
-- Executive Overview with DAX KPI cards
-- Loan & Risk (GNPA gauge, NPA waterfall)
-- Customer Analytics (RFM treemap, MAU trend)
-- Fraud Detection (hour heatmap, risk table)
-- Branch Performance (map + scorecard)
-
-### 5️⃣ Tableau (7 Sheets → 3 Dashboards)
-- Monthly volume trend
-- State deposit heatmap
-- Fraud hour heatmap
-- Investment risk-return scatter
-
----
-
-## 🔑 Key Business Insights
-
-- **GNPA:** Home Loans have lowest NPA (good collateral); Personal Loans highest risk
-- **Fraud:** 8%+ fraud rate at 2-3 AM; Mobile Banking + large amounts = high risk
-- **Customers:** Premium segment (3%) contributes 40%+ of deposits
-- **Channels:** UPI highest volume; Branch highest avg transaction value
-- **Investments:** Self-study investors outperform; volatility drives returns
-- **Churn:** 180+ day inactive customers with no loans = highest churn risk
-
----
-
-## 💻 SQL Concepts Used
-
-```
-✅ CTEs (multiple levels)           ✅ LAG() / LEAD()
-✅ NTILE() — RFM scoring            ✅ PERCENT_RANK()
-✅ SUM() OVER (running totals)      ✅ Rolling 30-day average
-✅ DATEDIFF for recency             ✅ CASE-based fraud scoring
-✅ Multi-table JOINs (7 tables)     ✅ COALESCE / NULLIF
-✅ Subqueries in SELECT             ✅ STRING_AGG
-✅ Statistical outlier detection    ✅ PIVOT with CASE WHEN
+indiaFirst-bank-analytics/
+|
+|-- data/
+|   |-- branches.csv
+|   |-- customers.csv
+|   |-- accounts.csv
+|   |-- transactions.csv
+|   |-- loans.csv
+|   |-- investments.csv
+|   |-- tickets.csv
+|
+|-- sql/
+|   |-- banking_analysis.sql
+|
+|-- python/
+|   |-- analysis.py
+|
+|-- outputs/
+|   |-- bank_dashboard.png
+|   |-- IndiaFirst_Bank_Analytics_Report.xlsx
+|
+|-- powerbi/
+|   |-- POWERBI_GUIDE.md
+|
+|-- generate_data.py
+|-- run_queries.py
+|-- README.md
 ```
 
 ---
 
-##  How to Run
+## SQL Work
+
+I split the queries into four levels because I wanted to be honest
+about which ones are straightforward and which ones actually took
+effort to figure out.
+
+Beginner level covers account distribution, state-wise deposits,
+and channel analysis. These are GROUP BY queries with some CASE WHEN.
+
+Intermediate adds LAG for month-over-month growth, the Customer 360
+CTE joining all 7 tables, branch scorecard, and NPA deep dive.
+
+Advanced is where it got interesting. RFM segmentation using NTILE
+across recency, frequency, and monetary dimensions. A fraud scoring
+model that assigns a risk score to each transaction based on time
+of day, amount relative to user baseline, and transaction category.
+Churn prediction features. Customer lifetime value calculation.
+Rolling 30-day average using ROWS BETWEEN.
+
+Expert level covers zone profitability joining branches to all other
+tables, a cross-sell matrix showing which customers have accounts
+but no loans or investments, and a single-query P&L view.
+
+---
+
+## Python and Excel
+
+The Python script loads all 7 tables using DuckDB and runs the
+key analytics queries. Output is an 8-panel matplotlib dashboard
+saved as a PNG and a 7-sheet Excel report built with xlsxwriter.
+
+The Excel report has proper formatting — alternating row colours,
+KPI cards on the first sheet, conditional formatting on the NPA
+and fraud rate columns.
+
+---
+
+## What I Found
+
+Personal loans have the highest NPA rate. Home loans have the lowest
+because of collateral. That matches what you read about in the news
+but it was satisfying to see it come out of the data.
+
+Fraud rate goes above 8 percent between 2 AM and 3 AM. During daytime
+hours it sits around 3 percent. The combination of Mobile Banking and
+amounts above Rs 2 lakh is the strongest fraud signal in the data.
+
+Premium segment customers are 3 percent of the base but contribute
+over 40 percent of deposits. This is why banks have relationship
+managers dedicated to HNI customers.
+
+Customers inactive for more than 180 days with no loan or investment
+products have the highest churn risk. The cross-sell matrix query
+shows exactly how many of these customers exist per segment.
+
+---
+
+## How To Run
 
 ```bash
-# 1. Install dependencies
-pip install duckdb pandas numpy matplotlib openpyxl xlsxwriter scipy
-
-# 2. Generate dataset
-python generate_data.py
-
-# 3. Run Python analysis + Excel + Charts
-python python/analysis.py
-
-# 4. Run SQL queries (DuckDB — zero setup)
-python run_queries.py
-
-# 5. For Power BI / Tableau — import CSVs from data/ folder
-# See powerbi/POWERBI_TABLEAU_GUIDE.md for full setup
+pip3 install duckdb pandas numpy matplotlib xlsxwriter scipy
+python3 generate_data.py
+python3 run_queries.py
+python3 python/analysis.py
 ```
 
----
-
-## 🛠️ Tools Used
-
-| Tool | Purpose |
-|------|---------|
-| SQL (DuckDB/PostgreSQL) | 20+ analytical queries |
-| Python (Pandas, Matplotlib) | Data processing + 8-panel dashboard |
-| Excel (xlsxwriter) | 7-sheet formatted report |
-| Power BI | Interactive dashboards + DAX |
-| Tableau | Visual analytics dashboards |
-| GitHub | Portfolio hosting |
+For Power BI follow the steps in powerbi/POWERBI_GUIDE.md.
+It has the DAX measures written out and the relationship setup.
 
 ---
 
-## 👤 Author
-**[Mehak pandey ]** —  Data Analyst
-pandeymehak.217@gmail.com 
+## What I Would Do Differently
+
+The investment analysis is the weakest part. I calculated returns
+using a simple formula rather than modelling actual NAV changes
+over time. Real mutual fund analysis would use daily NAV data
+and calculate XIRR rather than a flat return percentage.
+
+I also want to add macroeconomic variables — repo rate, inflation —
+as context for the loan and investment analysis. Rate changes
+directly affect NPA patterns and deposit behaviour.
 
 ---
+
+## What I Learned
+
+The Customer 360 query using multiple CTEs was the hardest thing
+I had written up to that point. Joining 7 tables and making sure
+the aggregations are correct at each step requires planning the
+query structure before writing any SQL. I started writing it
+directly and had to restart twice.
+
+RFM segmentation made more sense to me after implementing it than
+it did reading about it. The NTILE approach is elegant. You do not
+need to define arbitrary score thresholds — the data tells you
+where the boundaries are.
+
+The fraud scoring model taught me that a single signal is not enough.
+Late night alone is not fraud. High amount alone is not fraud.
+But late night plus high amount plus mobile banking together pushes
+the score high enough to flag it. Writing that in SQL using weighted
+CASE WHEN was a new pattern for me.
+
+---
+
+Mehak Pandey
+pandeymehak.217@gmail.com
 
