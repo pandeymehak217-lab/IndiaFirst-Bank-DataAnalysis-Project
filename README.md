@@ -1,11 +1,8 @@
 # 🏦 IndiaFirst Bank — Complete Analytics System
-### End-to-End Data Analyst Portfolio Project | SQL + Python + Excel + Power BI + Tableau
-
+### End-to-End Data Analyst Portfolio Project | 
 [![SQL](https://img.shields.io/badge/SQL-Advanced-blue)]()
 [![Python](https://img.shields.io/badge/Python-Pandas%20%7C%20Matplotlib-green)]()
 [![Excel](https://img.shields.io/badge/Excel-7%20Sheet%20Report-darkgreen)]()
-[![PowerBI](https://img.shields.io/badge/Power%20BI-DAX%20%7C%205%20Pages-yellow)]()
-[![Tableau](https://img.shields.io/badge/Tableau-7%20Sheets-orange)]()
 [![Dataset](https://img.shields.io/badge/Dataset-50K%20Transactions%20%7C%207%20Tables-red)]()
 [![Period](https://img.shields.io/badge/Period-2020--2024-purple)]()
 
