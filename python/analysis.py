@@ -20,7 +20,7 @@ OUT    = '/Users/mehekpandey/banking_project/outputs'
 con = duckdb.connect()
 for tbl in ['branches','customers','accounts','transactions','loans','investments','tickets']:
     con.execute(f"CREATE TABLE {tbl} AS SELECT * FROM read_csv_auto('{BASE}/{tbl}.csv')")
-print("✅ All 7 tables loaded")
+print(" All 7 tables loaded")
 
 def q(sql): return con.execute(sql).df()
 
@@ -143,7 +143,7 @@ zone_performance = q("""
     GROUP BY b.zone ORDER BY deposits_crore DESC
 """)
 
-print("✅ All analysis queries done")
+print(" All analysis queries done")
 
 # ════════════════════════════════════════════════════════════════
 # MATPLOTLIB CHARTS
@@ -301,7 +301,7 @@ plt.suptitle('IndiaFirst Bank — Complete Analytics Dashboard',
 chart_path = f'{OUT}/bank_dashboard.png'
 plt.savefig(chart_path, dpi=150, bbox_inches='tight', facecolor='#F8F9FA')
 plt.close()
-print(f"✅ Dashboard chart saved")
+print(f" Dashboard chart saved")
 
 # ════════════════════════════════════════════════════════════════
 # EXCEL MULTI-SHEET REPORT
@@ -338,7 +338,7 @@ def write_df(ws, df, row_start=1, fmt_header=fmt_header, alt1=fmt_alt1, alt2=fmt
             ws.write(row_num, col_num, val, fmt)
 
 # ── SHEET 1: Executive Summary ──
-ws1 = wb.add_worksheet('📊 Executive Summary')
+ws1 = wb.add_worksheet('Executive Summary')
 ws1.set_tab_color('#1565C0')
 ws1.merge_range('A1:J2', 'IndiaFirst Bank — Executive KPI Dashboard 2020–2024', fmt_title)
 ws1.set_row(0, 30); ws1.set_row(1, 30)
@@ -382,7 +382,7 @@ write_df(ws2, rfm_segments, row_start=27)
 for i in range(6): ws2.set_column(i, i, 20)
 
 # ── SHEET 3: Loan Analytics ──
-ws3 = wb.add_worksheet('💰 Loan Analytics')
+ws3 = wb.add_worksheet('Loan Analytics')
 ws3.set_tab_color('#E65100')
 ws3.merge_range('A1:G1', 'Loan Book Analysis', fmt_title)
 write_df(ws3, loan_analysis, row_start=1)
@@ -409,7 +409,7 @@ write_df(ws3, loan_vintage, row_start=25)
 for i in range(7): ws3.set_column(i, i, 20)
 
 # ── SHEET 4: Transaction Analytics ──
-ws4 = wb.add_worksheet('💳 Transactions')
+ws4 = wb.add_worksheet('Transactions')
 ws4.set_tab_color('#6A1B9A')
 ws4.merge_range('A1:G1', 'Transaction Channel Analysis', fmt_title)
 write_df(ws4, channel_analysis, row_start=1)
@@ -430,7 +430,7 @@ write_df(ws4, fraud_by_hour, row_start=40)
 for i in range(7): ws4.set_column(i, i, 18)
 
 # ── SHEET 5: Investment Analytics ──
-ws5 = wb.add_worksheet('📈 Investments')
+ws5 = wb.add_worksheet(' Investments')
 ws5.set_tab_color('#1B5E20')
 ws5.merge_range('A1:G1', 'Investment Portfolio Analysis', fmt_title)
 write_df(ws5, investment_analysis, row_start=1)
@@ -451,7 +451,7 @@ write_df(ws5, zone_inv, row_start=12)
 for i in range(7): ws5.set_column(i, i, 20)
 
 # ── SHEET 6: Branch Performance ──
-ws6 = wb.add_worksheet('🏦 Branch Performance')
+ws6 = wb.add_worksheet(' Branch Performance')
 ws6.set_tab_color('#880E4F')
 branch_perf = q("""
     SELECT b.branch_id, b.branch_name, b.city, b.state, b.zone, b.branch_type,
@@ -476,7 +476,7 @@ write_df(ws6, zone_performance, row_start=55)
 for i in range(11): ws6.set_column(i, i, 18)
 
 # ── SHEET 7: Support Analytics ──
-ws7 = wb.add_worksheet('🎫 Support Analytics')
+ws7 = wb.add_worksheet('Support Analytics')
 ws7.set_tab_color('#F57F17')
 ticket_summary = q("""
     SELECT category, priority,
@@ -492,9 +492,9 @@ write_df(ws7, ticket_summary, row_start=1)
 for i in range(7): ws7.set_column(i, i, 20)
 
 writer.close()
-print(f"✅ Excel report saved: {excel_path}")
+print(f" Excel report saved: {excel_path}")
 
 con.close()
-print("\n🎉 ALL OUTPUTS COMPLETE!")
-print(f"   📊 Dashboard chart : {OUT}/bank_dashboard.png")
-print(f"   📑 Excel Report    : {OUT}/IndiaFirst_Bank_Analytics_Report.xlsx")
+print("\nALL OUTPUTS COMPLETE!")
+print(f"    Dashboard chart : {OUT}/bank_dashboard.png")
+print(f"    Excel Report    : {OUT}/IndiaFirst_Bank_Analytics_Report.xlsx")
