@@ -1,0 +1,51 @@
+branch_id,branch_name,city,state,zone,branch_type,established_year,manager_name,atm_count,staff_count
+BR001,Mumbai West Branch,Mumbai,Maharashtra,West Zone,Urban,2012,Divya Saxena,1,42
+BR002,Mumbai East Branch,Mumbai,Maharashtra,West Zone,Urban,2005,Anjali Joshi,2,40
+BR003,Belgaum Central Branch,Belgaum,Karnataka,South Zone,Semi-Urban,2018,Mihir Malhotra,5,25
+BR004,Bengaluru Central Branch,Bengaluru,Karnataka,South Zone,Semi-Urban,2015,Rahul Kumar,2,29
+BR005,New Delhi South Branch,New Delhi,Delhi,North Zone,Urban,2016,Vijay Reddy,1,37
+BR006,Faridabad Main Branch,Faridabad,Delhi,North Zone,Rural,2017,Anjali Chatterjee,3,31
+BR007,Chennai Main Branch,Chennai,Tamil Nadu,South Zone,Semi-Urban,2014,Anjali Das,2,14
+BR008,Salem North Branch,Salem,Tamil Nadu,South Zone,Urban,2016,Isha Iyer,3,21
+BR009,Madurai West Branch,Madurai,Tamil Nadu,South Zone,Rural,2007,Vijay Trivedi,2,42
+BR010,Warangal South Branch,Warangal,Telangana,South Zone,Urban,2012,Anita Shah,1,22
+BR011,Hyderabad North Branch,Hyderabad,Telangana,South Zone,Urban,2007,Meera Krishnan,5,28
+BR012,Warangal West Branch,Warangal,Telangana,South Zone,Urban,2019,Ishaan Reddy,2,23
+BR013,Gandhinagar South Branch,Gandhinagar,Gujarat,West Zone,Semi-Urban,2017,Sneha Nair,2,40
+BR014,Rajkot Main Branch,Rajkot,Gujarat,West Zone,Semi-Urban,2008,Ishaan Trivedi,2,35
+BR015,Gandhinagar Main Branch,Gandhinagar,Gujarat,West Zone,Urban,2019,Sunita Reddy,5,8
+BR016,Ahmedabad West Branch,Ahmedabad,Gujarat,West Zone,Semi-Urban,2013,Priyanka Trivedi,3,15
+BR017,Kota Central Branch,Kota,Rajasthan,North Zone,Urban,2013,Rajesh Tiwari,2,40
+BR018,Jaipur West Branch,Jaipur,Rajasthan,North Zone,Urban,2011,Ishaan Iyer,2,42
+BR019,Ajmer Main Branch,Ajmer,Rajasthan,North Zone,Urban,2020,Aditi Gupta,3,27
+BR020,Jodhpur Main Branch,Jodhpur,Rajasthan,North Zone,Urban,2007,Anjali Saxena,4,12
+BR021,Howrah West Branch,Howrah,West Bengal,East Zone,Urban,2010,Priya Banerjee,5,35
+BR022,Howrah East Branch,Howrah,West Bengal,East Zone,Semi-Urban,2011,Seema Mehta,4,31
+BR023,Siliguri East Branch,Siliguri,West Bengal,East Zone,Urban,2012,Mihir Singh,3,9
+BR024,Allahabad Central Branch,Allahabad,Uttar Pradesh,North Zone,Urban,2006,Mihir Singh,1,29
+BR025,Lucknow East Branch,Lucknow,Uttar Pradesh,North Zone,Urban,2020,Meera Chatterjee,2,44
+BR026,Allahabad South Branch,Allahabad,Uttar Pradesh,North Zone,Urban,2020,Varun Joshi,1,14
+BR027,Kozhikode South Branch,Kozhikode,Kerala,South Zone,Urban,2006,Anita Trivedi,1,11
+BR028,Thrissur West Branch,Thrissur,Kerala,South Zone,Urban,2008,Nisha Joshi,2,42
+BR029,Thrissur Central Branch,Thrissur,Kerala,South Zone,Urban,2013,Zara Nair,1,36
+BR030,Kollam Main Branch,Kollam,Kerala,South Zone,Urban,2005,Anjali Krishnan,2,18
+BR031,Thrissur South Branch,Thrissur,Kerala,South Zone,Urban,2017,Akash Verma,4,8
+BR032,Amritsar South Branch,Amritsar,Punjab,North Zone,Urban,2020,Ishaan Joshi,3,21
+BR033,Chandigarh East Branch,Chandigarh,Punjab,North Zone,Semi-Urban,2006,Monika Shah,1,11
+BR034,Patiala South Branch,Patiala,Punjab,North Zone,Urban,2010,Akash Banerjee,1,19
+BR035,Chandigarh East Branch,Chandigarh,Punjab,North Zone,Urban,2012,Utkarsh Gupta,5,23
+BR036,Patiala East Branch,Patiala,Punjab,North Zone,Urban,2007,Varun Desai,5,44
+BR037,Hisar Central Branch,Hisar,Haryana,North Zone,Semi-Urban,2015,Nisha Reddy,4,16
+BR038,Hisar South Branch,Hisar,Haryana,North Zone,Urban,2007,Aarav Malhotra,5,44
+BR039,Gurugram Main Branch,Gurugram,Haryana,North Zone,Urban,2013,Divya Krishnan,3,12
+BR040,Faridabad North Branch,Faridabad,Haryana,North Zone,Urban,2019,Manoj Kapoor,3,41
+BR041,Ujjain North Branch,Ujjain,Madhya Pradesh,Central Zone,Rural,2008,Divya Reddy,1,14
+BR042,Ujjain Central Branch,Ujjain,Madhya Pradesh,Central Zone,Urban,2011,Seema Shah,2,24
+BR043,Muzaffarpur Main Branch,Muzaffarpur,Bihar,East Zone,Urban,2018,Rahul Patel,1,29
+BR044,Gaya West Branch,Gaya,Bihar,East Zone,Rural,2010,Monika Malhotra,5,35
+BR045,Darbhanga Main Branch,Darbhanga,Bihar,East Zone,Urban,2009,Manoj Patel,3,45
+BR046,Darbhanga Central Branch,Darbhanga,Bihar,East Zone,Urban,2006,Rohit Iyer,1,30
+BR047,Gaya West Branch,Gaya,Bihar,East Zone,Urban,2008,Siddharth Tiwari,5,34
+BR048,Visakhapatnam Central Branch,Visakhapatnam,Andhra Pradesh,South Zone,Rural,2010,Varun Sharma,2,29
+BR049,Tirupati West Branch,Tirupati,Andhra Pradesh,South Zone,Semi-Urban,2012,Rahul Verma,1,32
+BR050,Vijayawada South Branch,Vijayawada,Andhra Pradesh,South Zone,Urban,2019,Siddharth Mehta,2,22
